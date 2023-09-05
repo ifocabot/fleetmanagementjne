@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('runsheet_courier_id')->nullable();
+            $table->string('departement')->nullable();
+            $table->string('status_terakhir')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

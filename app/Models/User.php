@@ -42,4 +42,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+        public function oddoIns()
+        {
+            return $this->hasMany(oddoInModel::class, 'user_id');
+        }
+
+        public function oddoOuts()
+        {
+            return $this->hasMany(oddoOutModel::class, 'user_id');
+        }
+
+
 }
